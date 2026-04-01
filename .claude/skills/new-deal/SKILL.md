@@ -100,18 +100,18 @@ Write three files under `output/<DEAL_NAME>/`:
 
 **`output/<DEAL_NAME>/teammate-data-logic-dev.md`**
 
-Use the template at `.claude/skills/new-deal/brief-data-logic-dev.md`,
+Use the template at `agents/brief-data-logic-dev.md`,
 substituting every occurrence of `<DEAL_NAME>`, `<ENTRY_MULTIPLE>`,
 and `<TLB_PCT>` with the resolved values.
 
 **`output/<DEAL_NAME>/teammate-excel-exec.md`**
 
-Use the template at `.claude/skills/new-deal/brief-excel-exec.md`,
+Use the template at `agents/brief-excel-exec.md`,
 substituting `<DEAL_NAME>`.
 
 **`output/<DEAL_NAME>/teammate-qa.md`**
 
-Use the template at `.claude/skills/new-deal/brief-qa.md`,
+Use the template at `agents/brief-qa.md`,
 substituting `<DEAL_NAME>`.
 
 ### Step 6 — Initialize status files
@@ -201,4 +201,4 @@ docs/
 - The entry year must be the last actual (non-projected) year in the data.
 - If the user wants to run multiple deals at the same time, each gets its own `/new-deal` invocation and its own team — they run fully in parallel.
 - For assumption overrides beyond `entry_multiple` and `tlb_pct`, the user can say so in natural language (e.g., "use 7-year model" or "no cash sweep") — incorporate those into the teammate-data-logic-dev.md brief's assumptions block.
-- See `.claude/skills/new-deal/assumptions-reference.md` for the full list of overrideable LBO assumptions and their defaults.
+- See `agents/assumptions-reference.md` for the full list of overrideable LBO assumptions and their defaults.

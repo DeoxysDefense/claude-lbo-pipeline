@@ -42,15 +42,17 @@ claude-lbo-pipeline/
 ├── lbo_engine.py                    # LBO Brain: JSON → 109 cell-level instructions
 ├── run_lbo_pipeline.py              # Single-file reference pipeline (no teammates)
 │
+├── agents/
+│   ├── brief-data-logic-dev.md      # Teammate 1: validate JSON + run LBO engine
+│   ├── brief-excel-exec.md          # Teammate 2: write 109 cells into Excel model
+│   ├── brief-qa.md                  # Teammate 3: verify model + write QA report
+│   └── assumptions-reference.md    # Full LBOAssumptions parameter reference
+│
 ├── .claude/
 │   ├── CLAUDE.md                    # Project config read by Claude Code
 │   └── skills/
 │       ├── new-deal/                # /new-deal skill — main entry point
-│       │   ├── SKILL.md
-│       │   ├── brief-data-logic-dev.md
-│       │   ├── brief-excel-exec.md
-│       │   ├── brief-qa.md
-│       │   └── assumptions-reference.md
+│       │   └── SKILL.md
 │       ├── advanced-excel/          # /advanced-excel skill
 │       ├── data-parsing/            # /data-parsing skill
 │       ├── financial-domain-expert/ # /financial-domain-expert skill
@@ -171,7 +173,7 @@ The engine (`lbo_engine.py`) takes a `LBOAssumptions` dataclass. All parameters 
 | `exit_multiple` | `= entry` | Base case exit multiple |
 | `projection_years` | `5` | Years to project (max 6) |
 
-Full parameter reference: [`.claude/skills/new-deal/assumptions-reference.md`](.claude/skills/new-deal/assumptions-reference.md)
+Full parameter reference: [`agents/assumptions-reference.md`](agents/assumptions-reference.md)
 
 ---
 
