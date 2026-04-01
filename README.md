@@ -102,7 +102,7 @@ export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 ### 1. Clone and open in Claude Code
 
 ```bash
-git clone https://github.com/windanceroy/claude-lbo-pipeline.git
+git clone https://github.com/DeoxysDefense/claude-lbo-pipeline.git
 cd claude-lbo-pipeline
 claude .
 ```
