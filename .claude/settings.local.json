@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(/.claude/skills/financial-domain-expert/**)",
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}

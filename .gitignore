@@ -1,0 +1,25 @@
+# Deal output — populated models, audit logs, deal data (never committed)
+output/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp Excel lock files
+~$*.xlsx
+
+# Env / secrets
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# Claude local memory / session state
+.claude/projects/
