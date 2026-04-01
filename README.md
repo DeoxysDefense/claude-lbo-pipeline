@@ -36,7 +36,7 @@ Each deal runs in an isolated folder (`output/<DealName>/`) so multiple deals ne
 
 ```
 claude-lbo-pipeline/
-├── IOI Model Template.xlsx          # LBO model template (never modified directly)
+├── IOI Model Template.xlsx          # YOUR template goes here (not included — see Quickstart)
 ├── advanced_excel.py                # Agent tool: read/write/format Excel cells
 ├── data_parser.py                   # Agent tool: parse financial docs → LBO JSON
 ├── lbo_engine.py                    # LBO Brain: JSON → 109 cell-level instructions
@@ -107,7 +107,21 @@ cd claude-lbo-pipeline
 claude .
 ```
 
-### 2. Upload your financial documents
+### 2. Add your LBO model template
+
+The Excel template is **not included** in this repo — you need to provide your own.
+
+Place your `.xlsx` LBO model in the project root and name it exactly:
+
+```
+IOI Model Template.xlsx
+```
+
+The pipeline reads from this file as a base and writes a populated copy to `output/<DealName>/LBO_populated.xlsx` — the original is never modified.
+
+> **Sheet names must match:** The model expects sheets named `Model`, `Output AVP`, `P&L (presentation)`, and `PB_CACHE`. If your template uses different sheet names, update the cell references in `lbo_engine.py` and `advanced_excel.py` accordingly.
+
+### 3. Upload your financial documents
 
 Drop CIM, management presentation, or screenshots into the chat. Supported formats: `.xlsx`, `.pdf`, `.pptx`, `.docx`, images.
 

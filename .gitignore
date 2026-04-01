@@ -1,3 +1,6 @@
+# LBO model template (bring your own — see README)
+IOI Model Template.xlsx
+
 # Deal output — populated models, audit logs, deal data (never committed)
 output/
 
@@ -23,3 +26,6 @@ Thumbs.db
 
 # Claude local memory / session state
 .claude/projects/
+
+# Deal-specific QA reports (generated per deal)
+docs/qa-report-*.md
